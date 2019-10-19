@@ -1,7 +1,7 @@
 import tweepy
 import re
 import os
-
+from utils.pharser import pharse_collector
 
 API_KEY = os.environ.get('API_KEY', None)
 API_SECRET_KEY = os.environ.get('API_SECRET_KEY', None)
@@ -42,5 +42,7 @@ def keyword_search(keyword):
 
 
 if __name__ == '__main__':
-    tags = keyword_search("Python")
-    print(tags)
+    tag_collector = pharse_collector("MachineLearning python")
+    tags = [] # collect all data from tags
+    for word in tag_collector:
+        tags.append(keyword_search(word))
