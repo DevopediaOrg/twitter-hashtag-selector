@@ -38,11 +38,4 @@ def keyword_search(keyword):
     for text in api.search(q=keyword, lang="en", ):
         tags = re.findall(r"(#\w+)", str(text))
         hash_tag.extend(tags)
-    return set(hash_tag)
-
-
-if __name__ == '__main__':
-    tag_collector = phrase_collector("MachineLearning python")
-    tags = [] # collect all data from tags
-    for word in tag_collector:
-        tags.append(keyword_search(word))
+    return hash_tag
