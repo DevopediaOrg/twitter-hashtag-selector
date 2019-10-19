@@ -40,25 +40,6 @@ def keyword_search(keyword):
     return set(hash_tag)
 
 
-def hasgtag_followers(tags):
-    """Get the number of followers, based on the hash tags.
-    
-    tags: list of hash tags is input to get number of followers.
-    returns:
-    """
-    
-    return tags 
-
-
-def hashtag_recent_tweets():
-    """Get the recent tweets, based on hash tags.
-
-    """
-    return None
-
-
-
 if __name__ == '__main__':
     tags = keyword_search("Python")
-    followers = hasgtag_followers(tags)
-    print(followers)
+    print(tags)
