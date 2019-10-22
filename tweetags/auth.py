@@ -48,8 +48,3 @@ class AuthenticationAPI(object):
             pass
         return resp
 
-
-# if __name__ == '__main__':
-#     a = AuthenticationAPI()
-#     a.app_only_auth_token(os.environ.get("API_KEY"), os.environ.get("API_SECRET_KEY"))
-    
