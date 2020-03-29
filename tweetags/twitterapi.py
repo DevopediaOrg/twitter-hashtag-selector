@@ -35,6 +35,7 @@ def keyword_search(keyword):
     access_token, access_token_key = ACCESS_TOKEN, ACCESS_TOKEN_KEY
     api = tweepy_auth(api_key, api_secret_key, access_token, access_token_key)
     hash_tag = []
+    keyword='%23{0}&src=compose&result_type=topics&context_text=%23{0}&topic_type=hashtag'.format(keyword)
     for text in api.search(q=keyword, lang="en", ):
         tags = re.findall(r"(#\w+)", str(text))
         hash_tag.extend(tags)
